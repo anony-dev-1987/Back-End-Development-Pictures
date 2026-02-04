@@ -35,7 +35,8 @@ def count():
 ######################################################################
 @app.route("/picture", methods=["GET"])
 def get_pictures():
-    pass
+    pictures = [pic["pic_url"] for pic in data]
+    return jsonify(pictures)
 
 ######################################################################
 # GET A PICTURE
